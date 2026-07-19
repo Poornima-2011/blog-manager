@@ -8,26 +8,66 @@
 </head>
 <body>
 
-    <nav>
-        <h2>Blog Manager</h2>
+    <header>
+        <nav>
+            <h2>Blog Manager</h2>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="add-blog.html">Add Blog</a></li>
-        </ul>
-    </nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-blog.html">Add Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <h1>Welcome to Blog Manager</h1>
 
-        <p>
-            This is a simple blog management application where you can
-            create, view, edit and delete blog posts.
-        </p>
+        <section class="hero">
+            <h1>Welcome to Blog Manager</h1>
 
-        <button onclick="location.href='add-blog.html'">
-            Add New Blog
-        </button>
+            <p>
+                Create, manage and explore your blogs with a clean and
+                professional interface.
+            </p>
+
+            <button onclick="location.href='add-blog.html'">
+                Add New Blog
+            </button>
+        </section>
+
+        <section class="blog-container">
+
+            <div class="blog-card">
+                <h3>Java Full Stack</h3>
+
+                <p>
+                    Learn Java, Spring Boot, MySQL and build real-world applications.
+                </p>
+
+                <button>Read More</button>
+            </div>
+
+            <div class="blog-card">
+                <h3>HTML & CSS</h3>
+
+                <p>
+                    Design beautiful and responsive websites using HTML and CSS.
+                </p>
+
+                <button>Read More</button>
+            </div>
+
+            <div class="blog-card">
+                <h3>JavaScript Basics</h3>
+
+                <p>
+                    Understand variables, functions, DOM and events with JavaScript.
+                </p>
+
+                <button>Read More</button>
+            </div>
+
+        </section>
+
     </main>
 
     <footer>
