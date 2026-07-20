@@ -8,25 +8,54 @@
 </head>
 <body>
 
-<nav>
-    <h2>Blog Manager</h2>
+<header>
+    <nav>
+        <h2>Blog Manager</h2>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="add-blog.html">Add Blog</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-blog.html">Add Blog</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main>
-    <h1>Add New Blog</h1>
 
-    <form>
-        <input type="text" placeholder="Enter Blog Title" required><br><br>
+    <section class="hero">
+        <h1>Add New Blog</h1>
+        <p>Create your blog by filling the form below.</p>
+    </section>
 
-        <textarea rows="8" cols="50" placeholder="Write your blog here..." required></textarea><br><br>
+    <form id="blogForm">
 
-        <button type="submit">Submit Blog</button>
+        <label>Blog Title</label>
+        <input
+            type="text"
+            id="title"
+            placeholder="Enter Blog Title"
+        >
+
+        <label>Author Name</label>
+        <input
+            type="text"
+            id="author"
+            placeholder="Enter Author Name"
+        >
+
+        <label>Blog Content</label>
+        <textarea
+            id="content"
+            placeholder="Write your blog here..."
+        ></textarea>
+
+        <button type="submit">
+            Add Blog
+        </button>
+
     </form>
+
+    <p id="message"></p>
+
 </main>
 
 <footer>
