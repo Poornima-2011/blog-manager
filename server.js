@@ -10,27 +10,42 @@ app.use(express.json());
 // Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
-// Home Route
+// Store blogs in memory
+let blogs = [];
+
+// Home Page
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// GET Route
+// Get all blogs
 app.get("/blogs", (req, res) => {
-    res.json({
-        message: "GET request working successfully!",
-        blogs: []
-    });
+    res.json(blogs);
 });
 
-// POST Route
+// Add a new blog
 app.post("/blogs", (req, res) => {
 
-    const blog = req.body;
+    const { title, author, content } = req.body;
+
+    if (!title || !author || !content) {
+        return res.status(400).json({
+            message: "All fields are required."
+        });
+    }
+
+    const newBlog = {
+        id: blogs.length + 1,
+        title,
+        author,
+        content
+    };
+
+    blogs.push(newBlog);
 
     res.status(201).json({
-        message: "Blog received successfully!",
-        data: blog
+        message: "Blog added successfully!",
+        blog: newBlog
     });
 
 });
