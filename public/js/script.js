@@ -1,6 +1,6 @@
-// ===============================
-// Day 4 - Form Validation
-// ===============================
+
+// Add Blog
+
 
 const form = document.getElementById("blogForm");
 
@@ -65,9 +65,9 @@ if (form) {
 }
 
 
-// ===============================
-// Day 7 - View Blogs
-// ===============================
+
+// View Blogs
+
 
 const blogContainer = document.getElementById("blogContainer");
 
@@ -78,6 +78,8 @@ if (blogContainer) {
     .then(response => response.json())
 
     .then(blogs => {
+
+        blogContainer.innerHTML = "";
 
         if (blogs.length === 0) {
 
@@ -102,8 +104,6 @@ if (blogContainer) {
                     <p><strong>Author:</strong> ${blog.author}</p>
 
                     <p>${blog.content}</p>
-
-                    <button>Read More</button>
 
                 </div>
 
