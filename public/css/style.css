@@ -1,6 +1,4 @@
-/* ==========================
-   Reset
-========================== */
+/* Reset */
 *{
     margin:0;
     padding:0;
@@ -8,24 +6,20 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* ==========================
-   Body
-========================== */
+/* Body */
 body{
-    background:#f4f6f9;
+    background:#f4f7fb;
     color:#333;
     min-height:100vh;
     display:flex;
     flex-direction:column;
 }
 
-/* ==========================
-   Header
-========================== */
+/* Header */
 header{
     background:#1f2937;
-    color:white;
-    padding:20px 50px;
+    padding:18px 50px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 nav{
@@ -35,121 +29,81 @@ nav{
 }
 
 nav h2{
+    color:white;
     font-size:30px;
 }
 
 nav ul{
-    list-style:none;
     display:flex;
+    list-style:none;
     gap:25px;
 }
 
-nav ul li a{
+nav a{
     color:white;
     text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
+    font-weight:bold;
+    transition:.3s;
 }
 
-nav ul li a:hover{
+nav a:hover{
     color:#38bdf8;
 }
 
-/* ==========================
-   Main
-========================== */
+/* Main */
 main{
     flex:1;
     padding:40px;
 }
 
-/* ==========================
-   Hero Section
-========================== */
+/* Hero */
 .hero{
     text-align:center;
     margin-bottom:40px;
 }
 
 .hero h1{
-    font-size:50px;
+    font-size:42px;
+    color:#1f2937;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:20px;
-    color:#555;
+    color:#666;
+    font-size:18px;
     margin-bottom:25px;
 }
 
-/* ==========================
-   Buttons
-========================== */
-button{
+.hero button{
     background:#2563eb;
     color:white;
     border:none;
-    padding:12px 25px;
-    border-radius:6px;
-    font-size:16px;
+    padding:14px 30px;
+    border-radius:8px;
     cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#1d4ed8;
-}
-
-/* ==========================
-   Blog Cards
-========================== */
-.blog-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.blog-card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    font-size:16px;
     transition:.3s;
 }
 
-.blog-card:hover{
-    transform:translateY(-8px);
+.hero button:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
 }
 
-.blog-card h3{
-    margin-bottom:15px;
-}
-
-.blog-card p{
-    margin-bottom:20px;
-    line-height:1.6;
-}
-
-/* ==========================
-   Add Blog Form
-========================== */
-
+/* Form */
 form{
-    max-width:650px;
-    margin:0 auto;
+    max-width:700px;
+    margin:30px auto;
     background:white;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
 
 form label{
+    display:block;
+    margin:15px 0 8px;
     font-weight:bold;
-    font-size:16px;
 }
 
 form input,
@@ -157,30 +111,70 @@ form textarea{
     width:100%;
     padding:12px;
     border:1px solid #ccc;
-    border-radius:6px;
+    border-radius:8px;
     font-size:16px;
 }
 
 form textarea{
-    height:180px;
-    resize:vertical;
+    height:160px;
+    resize:none;
 }
 
 form button{
     width:100%;
-    margin-top:10px;
-}
-
-#message{
-    text-align:center;
-    font-size:18px;
-    font-weight:bold;
     margin-top:20px;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* ==========================
-   Footer
-========================== */
+form button:hover{
+    background:#1d4ed8;
+}
+
+/* Message */
+#message{
+    margin-top:20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* Blog Cards */
+.blog-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.blog-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.blog-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.blog-card p{
+    line-height:1.7;
+    color:#555;
+}
+
+/* Footer */
 footer{
     background:#1f2937;
     color:white;
@@ -189,40 +183,41 @@ footer{
     margin-top:auto;
 }
 
-/* ==========================
-   Responsive
-========================== */
-
+/* Responsive */
 @media(max-width:768px){
 
-header{
-    padding:20px;
-}
+    header{
+        padding:20px;
+    }
 
-nav{
-    flex-direction:column;
-    gap:15px;
-}
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-nav ul{
-    flex-direction:column;
-    align-items:center;
-}
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
 
-.hero h1{
-    font-size:35px;
-}
+    .hero h1{
+        font-size:32px;
+    }
 
-.hero p{
-    font-size:18px;
-}
+    .hero p{
+        font-size:16px;
+    }
 
-main{
-    padding:20px;
-}
+    main{
+        padding:20px;
+    }
 
-form{
-    padding:20px;
-}
+    .blog-container{
+        grid-template-columns:1fr;
+    }
+
+    form{
+        padding:20px;
+    }
 
 }
