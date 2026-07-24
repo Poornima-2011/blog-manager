@@ -78,6 +78,21 @@ http://localhost:3000
 | DELETE | /blogs/:id | Delete a blog |
 
 
+## Home Page
+
+![Home](photos/home.png)
+
+## Add Blog
+
+![Add Blog](photos/add-blog.png)
+
+## Postman Testing
+
+![Postman](photos/postman.png)
+
+## Responsive Design
+
+![Responsive](photos/responsive.png)
 
 
 ## Future Improvements
